@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-6 col-md-6 col-xs-12 form-group">
+      <label>Processors:</label>
+      <textarea class="form-control" rows="10" [(ngModel)]="processorsText"></textarea>
+    </div>
+    <div class="col-lg-6 col-md-6 col-xs-12 form-group">
+      <label>Expression:</label>
+      <textarea class="form-control" rows="10" [(ngModel)]="expressionText"></textarea>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-12 col-md-12 col-xs-12">
+      <label>Input:</label>
+    </div>
+    <div class="col-lg-12 col-md-12 col-xs-12">
+      <div class="input-group" style="margin-bottom: 10px">
+        <input type="text" class="form-control" placeholder="URL" [(ngModel)]="inputUrl"></input>
+        <div class="input-group-btn">
+          <button type="button" class="btn btn-default" (click)="get()" [disabled]="getting">{{ getting ? '...' : 'Get' }}</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-12 col-md-12 col-xs-12">
+      <div class="form-group">
+        <textarea class="form-control" rows="10" [(ngModel)]="inputText"></textarea>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-12 col-md-12 col-xs-12">
+      <label>Output:</label>
+      <pre>{{output}}</pre>
+    </div>
+  </div>
+</div>
